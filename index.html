@@ -39,6 +39,8 @@ body.pk{margin:0;font-family:Outfit,system-ui,sans-serif;color:var(--pk-ink);-we
 .pk-weiter{margin-top:22px;display:flex;justify-content:space-between;align-items:center;gap:16px;background:var(--pk-lind-h);border-radius:16px;padding:16px 20px;font-size:16px}
 .pk-knopf{all:unset;cursor:pointer;background:var(--pk-lind);color:var(--pk-ink);font-weight:600;font-size:15px;padding:11px 18px;border-radius:12px;transition:transform 160ms cubic-bezier(.23,1,.32,1)}
 .pk-knopf:active{transform:scale(.97)}
+.wi-portal .wk-seg{display:none}
+.wi-portal .wd-heute{background:var(--pk-lind);color:var(--pk-ink)}
 .pk-fuss{margin-top:26px;text-align:center;color:var(--pk-mut);font-size:12px}
 @media (max-width:820px){.pk-raster{grid-template-columns:repeat(2,minmax(0,1fr))}.pk-seite{padding-left:20px;padding-right:20px}}
 @media (max-width:560px){.pk-raster{grid-template-columns:1fr}.pk-hero h1{text-transform:none;font-size:30px}.pk-k{height:120px;grid-template-columns:minmax(0,1fr) 100px}.pk-k img{width:100px;height:120px}}
@@ -96,7 +98,7 @@ body.pk{margin:0;font-family:Outfit,system-ui,sans-serif;color:var(--pk-ink);-we
     WI_st.q=q||"";WI_st.ber="";WI_st.id=null;WI_st.tiefeId=null;WI_st.kap=null;WI_st.tid=null;
     if(m==="vo"){WI_st.tab="vo";WI_st.modus="kb"}else{WI_st.tab="kb";WI_st.modus=m}
     WI_oeffnen();WI_zeige();
-    var z=WI_st.el&&WI_st.el.querySelector(".wi-zur");if(z)z.textContent="‹ Start";
+    
   }
   document.addEventListener("click",function(e){
     var b=e.target.closest("[data-m],[data-q],[data-vo]");if(!b||b.closest(".wi-portal"))return;
@@ -106,7 +108,14 @@ body.pk{margin:0;font-family:Outfit,system-ui,sans-serif;color:var(--pk-ink);-we
     oeffne(b.dataset.m);
   });
   document.getElementById("pk-q").addEventListener("keydown",function(e){if(e.key==="Enter"&&this.value.trim()){oeffne("kb",this.value.trim());this.blur()}});
-  new MutationObserver(function(){var z=WI_st.el&&WI_st.el.querySelector(".wi-zur");if(z&&z.textContent!=="‹ Start"&&/Mehr/.test(z.textContent))z.textContent="‹ Start"}).observe(document.body,{subtree:true,childList:true});
+  /* Jede Kachel bekommt einen eigenen Bildschirm: Reiterleiste aus Doku-Fix weg, Überschrift und Zurück-Knopf passend zum Bereich */
+  var TITEL={kb:"Krankheitsbilder",tests:"Tests",wdh:"Lernen",forschung:"Forschung",vo:"Verordnung"};
+  function bereich(){return WI_st.tab==="vo"?"vo":(WI_st.modus||"kb")}
+  new MutationObserver(function(){
+    var el=WI_st.el;if(!el)return;var t=TITEL[bereich()];
+    el.querySelectorAll("h1").forEach(function(h){if(h.textContent==="Wissen")h.textContent=t});
+    el.querySelectorAll(".wi-zur").forEach(function(z){if(/Mehr/.test(z.textContent))z.textContent="‹ Start";else if(/Wissen/.test(z.textContent))z.textContent="‹ "+t});
+  }).observe(document.body,{subtree:true,childList:true,characterData:true});
 })();
 </script>
 <script>if("serviceWorker" in navigator)addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));</script>
