@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="de" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#F3F5EE">
+<title>Physio-Know</title>
+<link rel="stylesheet" href="dokufix-stile.css">
+<style>
+:root{--pk-bg:#F3F5EE;--pk-ink:#2B2E2F;--pk-mut:#6B6F70;--pk-line:#E1E4DA;--pk-lind:#C9E86B;--pk-lind-h:#E9F5C8}
+html,body{background:var(--pk-bg)}
+body.pk{margin:0;font-family:Outfit,system-ui,sans-serif;color:var(--pk-ink);-webkit-font-smoothing:antialiased}
+.pk-seite{max-width:1180px;margin:0 auto;padding:calc(env(safe-area-inset-top) + 18px) 40px 40px}
+.pk-top{display:flex;justify-content:space-between;align-items:center}
+.pk-logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px}
+.pk-logo i{width:32px;height:32px;border-radius:9px;background:var(--pk-ink);display:grid;place-items:center;color:var(--pk-lind);font-style:normal}
+.pk-chip{display:inline-block;font-size:13px;padding:5px 12px;border-radius:999px;background:var(--pk-lind-h);color:#3B4A12;font-weight:500;border:0;font-family:inherit;cursor:pointer}
+.pk-hero{padding:40px 0 22px;text-align:center}
+.pk-hero h1{text-transform:none;font-size:40px;font-weight:700;letter-spacing:-.02em;margin:0 0 20px}
+.pk-such{display:flex;align-items:center;gap:10px;max-width:720px;margin:0 auto;background:#fff;border:1px solid var(--pk-line);border-radius:16px;padding:0 20px}
+.pk-such svg{flex:none;color:var(--pk-mut)}
+.pk-such input{flex:1;border:0;outline:0;background:transparent;font:inherit;font-size:18px;padding:16px 0;color:var(--pk-ink)}
+.pk-tipps{margin-top:14px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.pk-raster{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:10px}
+.pk-k{all:unset;cursor:pointer;background:#fff;border:1px solid var(--pk-line);border-radius:18px;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) 120px;height:150px;transition:transform 160ms cubic-bezier(.23,1,.32,1)}
+.pk-k:active{transform:scale(.97)}
+.pk-k .t{padding:18px}.pk-k h2{font-size:21px;font-weight:600;margin:0}.pk-k p{color:var(--pk-mut);font-size:14px;margin:4px 0 0}
+.pk-k img{width:120px;height:150px;object-fit:cover;background:#EFEAE7}
+.pk-k.d{background:var(--pk-ink);color:#fff}.pk-k.d p{color:#C9CCC4}
+.pk-k[aria-disabled=true]{cursor:default}.pk-k[aria-disabled=true]:active{transform:none}
+.pk-weiter{margin-top:22px;display:flex;justify-content:space-between;align-items:center;gap:16px;background:var(--pk-lind-h);border-radius:16px;padding:16px 20px;font-size:16px}
+.pk-knopf{all:unset;cursor:pointer;background:var(--pk-lind);color:var(--pk-ink);font-weight:600;font-size:15px;padding:11px 18px;border-radius:12px;transition:transform 160ms cubic-bezier(.23,1,.32,1)}
+.pk-knopf:active{transform:scale(.97)}
+.pk-fuss{margin-top:26px;text-align:center;color:var(--pk-mut);font-size:12px}
+@media (max-width:820px){.pk-raster{grid-template-columns:repeat(2,minmax(0,1fr))}.pk-seite{padding-left:20px;padding-right:20px}}
+@media (max-width:560px){.pk-raster{grid-template-columns:1fr}.pk-hero h1{text-transform:none;font-size:30px}.pk-k{height:120px;grid-template-columns:minmax(0,1fr) 100px}.pk-k img{width:100px;height:120px}}
+@media (hover:hover) and (pointer:fine){.pk-k:hover{border-color:#C8CCBF}}
+</style>
+</head>
+<body class="pk">
+<main class="pk-seite">
+  <div class="pk-top"><div class="pk-logo"><i>K</i>Physio-Know</div><span class="pk-chip" id="pk-kw"></span></div>
+  <section class="pk-hero">
+    <h1>Was willst du nachschlagen?</h1>
+    <label class="pk-such"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="pk-q" type="search" placeholder="Krankheitsbild, Test oder Begriff" autocomplete="off" enterkeyhint="search"></label>
+    <div class="pk-tipps">
+      <button class="pk-chip" data-q="Lachman">Lachman-Test</button>
+      <button class="pk-chip" data-q="Frozen Shoulder">Frozen Shoulder</button>
+      <button class="pk-chip" data-q="Karpaltunnel">Karpaltunnel</button>
+      <button class="pk-chip" data-vo="1">Rezept prüfen</button>
+    </div>
+  </section>
+  <section class="pk-raster" id="pk-raster"></section>
+  <div class="pk-weiter" id="pk-weiter"></div>
+  <p class="pk-fuss">Testversion · Inhalte aus Doku-Fix v268 · keine Patientendaten</p>
+</main>
+
+<script src="daten/krankheitsbilder-grund.js"></script>
+<script src="daten/krankheitsbilder-karten.js"></script>
+<script src="daten/tests.js"></script>
+<script src="daten/quellen.js"></script>
+<script src="fortbildung/index.js"></script>
+<script src="wissen-ui.js"></script>
+<script src="wissen-kartei.js"></script>
+<script src="wissen-pi.js"></script>
+<script>
+(function(){
+  var B=window.PK_FB,T=window.PK_TESTS,W=window.WDH_INDEX||[];
+  var w0=W[0];
+  var kw=w0?("KW "+(+w0.kw.split("-W")[1])):"";
+  document.getElementById("pk-kw").textContent=kw?("Lernen "+kw):"";
+  var nTests=Object.keys(T.tests).length,nCl=Object.keys(T.cluster).length;
+  var K=[
+    {id:"kb",h:"Krankheitsbilder",p:B.length+" Karten mit Plakat",b:"wissen/SH04.webp"},
+    {id:"tests",h:"Tests",p:nTests+" Tests in "+nCl+" Clustern",b:"wissen/tests/lachman.webp"},
+    {id:"ana",h:"Anatomie",p:"3D-Figur folgt im nächsten Schritt",b:"fortbildung/bilder/2026-W48/ana-osg-knochen.webp",aus:1},
+    {id:"wdh",h:"Lernen",p:w0?(kw+": "+w0.titel.length+" Einheiten"):"Wiederholung",b:"fortbildung/bilder/2026-W48/ana-ell-baender.webp",d:1},
+    {id:"vo",h:"Verordnung",p:(window.WI_KARTEI?WI_KARTEI.length:9)+" Kapitel, Rezept prüfen",b:"wissen/kartei-leitbild.webp"},
+    {id:"forschung",h:"Forschung",p:"Studien, aufbereitet für dich",b:"wissen/NE01.webp"}
+  ];
+  var R=document.getElementById("pk-raster");
+  R.innerHTML=K.map(function(k){return '<button class="pk-k'+(k.d?' d':'')+'" data-m="'+k.id+'"'+(k.aus?' aria-disabled="true"':'')+'><div class="t"><h2>'+k.h+'</h2><p>'+k.p+'</p></div><img alt="" src="'+k.b+'" onerror="this.style.visibility=\'hidden\'"></button>'}).join("");
+  var we=document.getElementById("pk-weiter");
+  if(w0){we.innerHTML='<span><b>Diese Woche:</b> '+w0.titel.slice(0,3).join(", ")+' …</span><button class="pk-knopf" data-m="wdh">Lernen</button>'}else we.remove();
+
+  function oeffne(m,q){
+    WI_st.q=q||"";WI_st.ber="";WI_st.id=null;WI_st.tiefeId=null;WI_st.kap=null;WI_st.tid=null;
+    if(m==="vo"){WI_st.tab="vo";WI_st.modus="kb"}else{WI_st.tab="kb";WI_st.modus=m}
+    WI_oeffnen();WI_zeige();
+    var z=WI_st.el&&WI_st.el.querySelector(".wi-zur");if(z)z.textContent="‹ Start";
+  }
+  document.addEventListener("click",function(e){
+    var b=e.target.closest("[data-m],[data-q],[data-vo]");if(!b||b.closest(".wi-portal"))return;
+    if(b.getAttribute("aria-disabled")==="true")return;
+    if(b.dataset.q)return oeffne("kb",b.dataset.q);
+    if(b.dataset.vo)return oeffne("vo");
+    oeffne(b.dataset.m);
+  });
+  document.getElementById("pk-q").addEventListener("keydown",function(e){if(e.key==="Enter"&&this.value.trim()){oeffne("kb",this.value.trim());this.blur()}});
+  new MutationObserver(function(){var z=WI_st.el&&WI_st.el.querySelector(".wi-zur");if(z&&z.textContent!=="‹ Start"&&/Mehr/.test(z.textContent))z.textContent="‹ Start"}).observe(document.body,{subtree:true,childList:true});
+})();
+</script>
+</body>
+</html>

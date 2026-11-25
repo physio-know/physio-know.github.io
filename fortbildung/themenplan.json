@@ -1,0 +1,812 @@
+{
+ "regeln": "siehe Projekt Doku-Fix: fortbildung/ANLEITUNG.md. Wiederholung fällig nach 3, dann 8, dann 20 Wochen.",
+ "pool": [
+  {
+   "id": "WS01",
+   "titel": "Nicht-spezifischer Kreuzschmerz",
+   "bereich": "Wirbelsäule"
+  },
+  {
+   "id": "WS02",
+   "titel": "Lumbale Radikulopathie und Bandscheibenvorfall",
+   "bereich": "Wirbelsäule"
+  },
+  {
+   "id": "WS03",
+   "titel": "Lumbale Spinalkanalstenose",
+   "bereich": "Wirbelsäule"
+  },
+  {
+   "id": "WS04",
+   "titel": "Spondylolisthese",
+   "bereich": "Wirbelsäule"
+  },
+  {
+   "id": "WS05",
+   "titel": "Nicht-spezifischer Nackenschmerz",
+   "bereich": "Wirbelsäule"
+  },
+  {
+   "id": "WS06",
+   "titel": "Zervikale Radikulopathie",
+   "bereich": "Wirbelsäule"
+  },
+  {
+   "id": "WS07",
+   "titel": "HWS-Beschleunigungsverletzung (Schleudertrauma, WAD)",
+   "bereich": "Wirbelsäule"
+  },
+  {
+   "id": "WS08",
+   "titel": "Osteoporotische Wirbelkörperfraktur",
+   "bereich": "Wirbelsäule"
+  },
+  {
+   "id": "WS09",
+   "titel": "Idiopathische Skoliose",
+   "bereich": "Wirbelsäule"
+  },
+  {
+   "id": "WS10",
+   "titel": "Axiale Spondyloarthritis (Morbus Bechterew)",
+   "bereich": "Wirbelsäule"
+  },
+  {
+   "id": "SH01",
+   "titel": "Rotatorenmanschetten-Tendinopathie / subakromiales Schmerzsyndrom",
+   "bereich": "Schulter"
+  },
+  {
+   "id": "SH02",
+   "titel": "Rotatorenmanschettenruptur",
+   "bereich": "Schulter"
+  },
+  {
+   "id": "SH03",
+   "titel": "Tendinosis calcarea (Kalkschulter)",
+   "bereich": "Schulter"
+  },
+  {
+   "id": "SH04",
+   "titel": "Frozen Shoulder (adhäsive Kapsulitis)",
+   "bereich": "Schulter"
+  },
+  {
+   "id": "SH05",
+   "titel": "Schulterinstabilität und Luxation",
+   "bereich": "Schulter"
+  },
+  {
+   "id": "SH06",
+   "titel": "Omarthrose und Schulterendoprothese",
+   "bereich": "Schulter"
+  },
+  {
+   "id": "SH07",
+   "titel": "AC-Gelenk-Verletzung und -Arthrose",
+   "bereich": "Schulter"
+  },
+  {
+   "id": "SH08",
+   "titel": "Proximale Humerusfraktur",
+   "bereich": "Schulter"
+  },
+  {
+   "id": "SH09",
+   "titel": "Lange Bizepssehne und SLAP-Läsion",
+   "bereich": "Schulter"
+  },
+  {
+   "id": "SH10",
+   "titel": "Klavikulafraktur",
+   "bereich": "Schulter"
+  },
+  {
+   "id": "EB01",
+   "titel": "Epicondylopathia radialis humeri (Tennisellenbogen)",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "EB02",
+   "titel": "Epicondylopathia ulnaris humeri (Golferellenbogen)",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "EB03",
+   "titel": "Kubitaltunnelsyndrom",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "EB04",
+   "titel": "Radiuskopffraktur",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "EB05",
+   "titel": "Ellenbogenluxation",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "EB06",
+   "titel": "Distale Bizepssehnenruptur",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "EB07",
+   "titel": "Bursitis olecrani",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "EB08",
+   "titel": "Ellenbogenarthrose",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "EB09",
+   "titel": "Posttraumatische Ellenbogensteife",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "EB10",
+   "titel": "Olekranonfraktur",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "HG01",
+   "titel": "Distale Radiusfraktur",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "HG02",
+   "titel": "Karpaltunnelsyndrom",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "HG03",
+   "titel": "Tendovaginitis stenosans de Quervain",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "HG04",
+   "titel": "Skaphoidfraktur",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "HG05",
+   "titel": "TFCC-Läsion",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "HG06",
+   "titel": "Skapholunäre Bandverletzung",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "HG07",
+   "titel": "Handgelenkarthrose",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "HG08",
+   "titel": "Ganglion",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "HG09",
+   "titel": "CRPS nach Handgelenkverletzung",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "HG10",
+   "titel": "Handgelenkdistorsion",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "FI01",
+   "titel": "Rhizarthrose",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "FI02",
+   "titel": "Fingerpolyarthrose (Heberden, Bouchard)",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "FI03",
+   "titel": "Schnellender Finger (Tendovaginitis stenosans)",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "FI04",
+   "titel": "Morbus Dupuytren",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "FI05",
+   "titel": "Beugesehnenverletzung",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "FI06",
+   "titel": "Strecksehnenverletzung und Mallet-Finger",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "FI07",
+   "titel": "Skidaumen (ulnares Seitenband Daumengrundgelenk)",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "FI08",
+   "titel": "Mittelhand- und Fingerfrakturen",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "FI09",
+   "titel": "PIP-Gelenk-Verletzung",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "FI10",
+   "titel": "Rheumatoide Arthritis der Hand",
+   "bereich": "Ellenbogen/Hand"
+  },
+  {
+   "id": "HU01",
+   "titel": "Koxarthrose",
+   "bereich": "Hüfte/Knie"
+  },
+  {
+   "id": "HU02",
+   "titel": "Hüftendoprothese (Nachbehandlung)",
+   "bereich": "Hüfte/Knie"
+  },
+  {
+   "id": "HU03",
+   "titel": "Proximale Femurfraktur",
+   "bereich": "Hüfte/Knie"
+  },
+  {
+   "id": "HU04",
+   "titel": "Greater Trochanteric Pain Syndrome (Gluteale Tendinopathie)",
+   "bereich": "Hüfte/Knie"
+  },
+  {
+   "id": "HU05",
+   "titel": "Femoroazetabuläres Impingement (FAI)",
+   "bereich": "Hüfte/Knie"
+  },
+  {
+   "id": "HU06",
+   "titel": "Labrumläsion der Hüfte",
+   "bereich": "Hüfte/Knie"
+  },
+  {
+   "id": "HU07",
+   "titel": "Adduktorenbezogener Leistenschmerz",
+   "bereich": "Hüfte/Knie"
+  },
+  {
+   "id": "HU08",
+   "titel": "Hüftdysplasie beim Erwachsenen",
+   "bereich": "Hüfte/Knie"
+  },
+  {
+   "id": "HU09",
+   "titel": "Hüftkopfnekrose",
+   "bereich": "Hüfte/Knie"
+  },
+  {
+   "id": "HU10",
+   "titel": "Iliopsoas-Syndrom und schnappende Hüfte",
+   "bereich": "Hüfte/Knie"
+  },
+  {
+   "id": "KN01",
+   "titel": "Gonarthrose",
+   "bereich": "Hüfte/Knie"
+  },
+  {
+   "id": "KN02",
+   "titel": "Knieendoprothese (Nachbehandlung)",
+   "bereich": "Hüfte/Knie"
+  },
+  {
+   "id": "KN03",
+   "titel": "Patellofemorales Schmerzsyndrom",
+   "bereich": "Hüfte/Knie"
+  },
+  {
+   "id": "KN04",
+   "titel": "Vordere Kreuzbandruptur",
+   "bereich": "Hüfte/Knie"
+  },
+  {
+   "id": "KN05",
+   "titel": "Meniskusläsion",
+   "bereich": "Hüfte/Knie"
+  },
+  {
+   "id": "KN06",
+   "titel": "Innenbandverletzung",
+   "bereich": "Hüfte/Knie"
+  },
+  {
+   "id": "KN07",
+   "titel": "Patellaspitzensyndrom (Patellasehnen-Tendinopathie)",
+   "bereich": "Hüfte/Knie"
+  },
+  {
+   "id": "KN08",
+   "titel": "Patellaluxation",
+   "bereich": "Hüfte/Knie"
+  },
+  {
+   "id": "KN09",
+   "titel": "Iliotibiales Bandsyndrom",
+   "bereich": "Hüfte/Knie"
+  },
+  {
+   "id": "KN10",
+   "titel": "Tibiakopffraktur",
+   "bereich": "Hüfte/Knie"
+  },
+  {
+   "id": "SG01",
+   "titel": "Laterale Bandverletzung des Sprunggelenks",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "SG02",
+   "titel": "Chronische Sprunggelenkinstabilität",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "SG03",
+   "titel": "Sprunggelenkfraktur (Weber A–C)",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "SG04",
+   "titel": "Achillessehnen-Tendinopathie",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "SG05",
+   "titel": "Achillessehnenruptur",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "SG06",
+   "titel": "Syndesmosenverletzung",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "SG07",
+   "titel": "Arthrose des oberen Sprunggelenks",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "SG08",
+   "titel": "Vorderes und hinteres Impingement am Sprunggelenk",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "SG09",
+   "titel": "Peronealsehnen-Pathologie",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "SG10",
+   "titel": "Osteochondrale Läsion des Talus",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "FU01",
+   "titel": "Plantarfasziopathie (Fersenschmerz)",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "FU02",
+   "titel": "Tibialis-posterior-Dysfunktion / erworbener Plattfuß",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "FU03",
+   "titel": "Metatarsalgie",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "FU04",
+   "titel": "Morton-Neurom",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "FU05",
+   "titel": "Ermüdungsfraktur Mittelfuß",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "FU06",
+   "titel": "Fraktur der Basis des Metatarsale V",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "FU07",
+   "titel": "Diabetisches Fußsyndrom",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "FU08",
+   "titel": "Tarsaltunnelsyndrom",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "FU09",
+   "titel": "Lisfranc-Verletzung",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "FU10",
+   "titel": "Kindlicher Knick-Senkfuß",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "ZE01",
+   "titel": "Hallux valgus",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "ZE02",
+   "titel": "Hallux rigidus",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "ZE03",
+   "titel": "Krallen- und Hammerzehen",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "ZE04",
+   "titel": "Turf Toe",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "ZE05",
+   "titel": "Sesamoiditis",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "ZE06",
+   "titel": "Gicht (Podagra)",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "ZE07",
+   "titel": "Zehenfraktur",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "ZE08",
+   "titel": "Digitus quintus varus (Schneiderballen)",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "ZE09",
+   "titel": "Plantarplattenläsion MTP II",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "ZE10",
+   "titel": "Morbus Köhler II (Freiberg)",
+   "bereich": "Sprunggelenk/Fuß"
+  },
+  {
+   "id": "NE01",
+   "titel": "Schlaganfall",
+   "bereich": "Neurologie"
+  },
+  {
+   "id": "NE02",
+   "titel": "Morbus Parkinson",
+   "bereich": "Neurologie"
+  },
+  {
+   "id": "NE03",
+   "titel": "Multiple Sklerose",
+   "bereich": "Neurologie"
+  },
+  {
+   "id": "NE04",
+   "titel": "Polyneuropathie",
+   "bereich": "Neurologie"
+  },
+  {
+   "id": "NE05",
+   "titel": "Schädel-Hirn-Trauma (inkl. Gehirnerschütterung)",
+   "bereich": "Neurologie"
+  },
+  {
+   "id": "NE06",
+   "titel": "Inkomplette Querschnittlähmung",
+   "bereich": "Neurologie"
+  },
+  {
+   "id": "NE07",
+   "titel": "Lagerungsschwindel (BPPV) und vestibuläre Störungen",
+   "bereich": "Neurologie"
+  },
+  {
+   "id": "NE08",
+   "titel": "Periphere Fazialisparese",
+   "bereich": "Neurologie"
+  },
+  {
+   "id": "NE09",
+   "titel": "Guillain-Barré-Syndrom",
+   "bereich": "Neurologie"
+  },
+  {
+   "id": "NE10",
+   "titel": "Periphere Nervenläsion (Beispiel Peroneusparese)",
+   "bereich": "Neurologie"
+  },
+  {
+   "id": "IM01",
+   "titel": "COPD",
+   "bereich": "Innere/Sonstiges"
+  },
+  {
+   "id": "IM02",
+   "titel": "Asthma bronchiale",
+   "bereich": "Innere/Sonstiges"
+  },
+  {
+   "id": "IM03",
+   "titel": "Chronische Herzinsuffizienz",
+   "bereich": "Innere/Sonstiges"
+  },
+  {
+   "id": "IM04",
+   "titel": "Koronare Herzkrankheit / nach Herzinfarkt",
+   "bereich": "Innere/Sonstiges"
+  },
+  {
+   "id": "IM05",
+   "titel": "Periphere arterielle Verschlusskrankheit (pAVK)",
+   "bereich": "Innere/Sonstiges"
+  },
+  {
+   "id": "IM06",
+   "titel": "Diabetes mellitus Typ 2",
+   "bereich": "Innere/Sonstiges"
+  },
+  {
+   "id": "IM07",
+   "titel": "Adipositas",
+   "bereich": "Innere/Sonstiges"
+  },
+  {
+   "id": "IM08",
+   "titel": "Osteoporose",
+   "bereich": "Innere/Sonstiges"
+  },
+  {
+   "id": "IM09",
+   "titel": "Lymphödem",
+   "bereich": "Innere/Sonstiges"
+  },
+  {
+   "id": "IM10",
+   "titel": "Long/Post-COVID mit Belastungsintoleranz",
+   "bereich": "Innere/Sonstiges"
+  },
+  {
+   "id": "KI01",
+   "titel": "Craniomandibuläre Dysfunktion (CMD)",
+   "bereich": "Innere/Sonstiges"
+  },
+  {
+   "id": "IM11",
+   "titel": "Lipödem",
+   "bereich": "Innere/Sonstiges"
+  },
+  "KN11",
+  "NE11"
+ ],
+ "wochen": [
+  {
+   "kw": "2026-W48",
+   "einheiten": [
+    {
+     "id": "w48-nack",
+     "kb": "WS05",
+     "art": "kb",
+     "titel": "Nicht-spezifischer Nackenschmerz"
+    },
+    {
+     "id": "w48-rad",
+     "kb": "WS02",
+     "art": "kb",
+     "titel": "Lumbale Radikulopathie und Bandscheibenvorfall"
+    },
+    {
+     "id": "w48-rm",
+     "kb": "SH01",
+     "art": "kb",
+     "titel": "Rotatorenmanschetten-Tendinopathie"
+    },
+    {
+     "id": "w48-aha",
+     "kb": "NE01",
+     "art": "neu",
+     "titel": "Schlaganfall-Reha: neue AHA-Leitlinie 2026",
+     "thema": "AHA/ASA 2026 Guideline for Adult Stroke Rehabilitation and Recovery (27.08.2026)"
+    },
+    {
+     "id": "w48-hue",
+     "kb": "HU01",
+     "art": "kb",
+     "titel": "Koxarthrose"
+    }
+   ],
+   "notiz": "WS05 und WS02 auf Brunos Wunsch nach Nachprüfung der Karten; SH01, AHA 2026 und HU01 nachgebaut, weil der automatische Lauf am 22.11. am Nutzungslimit scheiterte. Keine Wiederholung fällig (erste fällig in W50)."
+  },
+  {
+   "kw": "2026-W47",
+   "einheiten": [
+    {
+     "id": "w47-fs",
+     "kb": "SH04",
+     "art": "kb",
+     "titel": "Frozen Shoulder"
+    },
+    {
+     "id": "w47-ks",
+     "kb": "WS01",
+     "art": "kb",
+     "titel": "Nicht-spezifischer Kreuzschmerz"
+    },
+    {
+     "id": "w47-ach",
+     "kb": "SG04",
+     "art": "kb",
+     "titel": "Achillessehnen-Tendinopathie"
+    },
+    {
+     "id": "w47-kts",
+     "kb": "HG02",
+     "art": "neu",
+     "titel": "Karpaltunnelsyndrom: neue Leitlinie 2026",
+     "thema": "JOSPT CPG Karpaltunnelsyndrom 2026"
+    },
+    {
+     "id": "w47-ga",
+     "kb": "KN01",
+     "art": "kb",
+     "titel": "Gonarthrose"
+    },
+    {
+     "id": "w47-gh",
+     "kb": "",
+     "art": "grund",
+     "titel": "Gewebeheilung: wann ist was belastbar?",
+     "thema": "Grundlagen Gewebeheilung"
+    },
+    {
+     "id": "w47-kn11",
+     "kb": "KN11",
+     "art": "kb",
+     "titel": "Habituelle Patellaluxation"
+    },
+    {
+     "id": "w47-qs",
+     "kb": "NE06",
+     "art": "kb",
+     "titel": "Querschnitt: was ist je Höhe möglich?"
+    },
+    {
+     "id": "w47-sw",
+     "kb": "NE07",
+     "art": "kb",
+     "titel": "Schwindel: einordnen, testen, behandeln"
+    },
+    {
+     "id": "w47-kopf",
+     "kb": "NE11",
+     "art": "kb",
+     "titel": "Kopfschmerzen: einordnen, testen, behandeln"
+    }
+   ]
+  }
+ ],
+ "themen": {
+  "SH04": {
+   "zuerst": "2026-W47",
+   "wiederholt": [],
+   "faellig": "2026-W50"
+  },
+  "WS01": {
+   "zuerst": "2026-W47",
+   "wiederholt": [],
+   "faellig": "2026-W50",
+   "notiz": "NICE NG59 Update 07/2026 schon drin"
+  },
+  "SG04": {
+   "zuerst": "2026-W47",
+   "wiederholt": [],
+   "faellig": "2026-W50"
+  },
+  "HG02": {
+   "zuerst": "2026-W47",
+   "wiederholt": [],
+   "faellig": "2026-W50",
+   "notiz": "Leitlinie 2026 behandelt"
+  },
+  "KN01": {
+   "zuerst": "2026-W47",
+   "wiederholt": [],
+   "faellig": "2026-W50"
+  },
+  "GEWEBEHEILUNG": {
+   "zuerst": "2026-W47",
+   "wiederholt": [],
+   "faellig": "2026-W50",
+   "notiz": "Grundlagen-Einheit (kein Krankheitsbild), Zusatz zu den 5 Einheiten. Wiederholung nach 3, 8, 20 Wochen wie die anderen."
+  },
+  "KN11": {
+   "zuerst": "2026-W47",
+   "wiederholt": [],
+   "faellig": "2026-W50"
+  },
+  "NE06": {
+   "zuerst": "2026-W47",
+   "wiederholt": [],
+   "faellig": "2026-W50"
+  },
+  "NE07": {
+   "zuerst": "2026-W47",
+   "wiederholt": [],
+   "faellig": "2026-W50"
+  },
+  "NE11": {
+   "zuerst": "2026-W47",
+   "wiederholt": [],
+   "faellig": "2026-W50",
+   "notiz": "Zusatzthema 20.11.2026 nach Deep Research; Krankheitsbild NE11 neu in v220"
+  },
+  "WS05": {
+   "zuerst": "2026-W48",
+   "wiederholt": [],
+   "faellig": "2026-W51",
+   "notiz": "Rasmussen-Barr 2023, Peters 2025, JOSPT-Revision angekündigt"
+  },
+  "WS02": {
+   "zuerst": "2026-W48",
+   "wiederholt": [],
+   "faellig": "2026-W51",
+   "notiz": "Zhu 2025 NMA, NICE 07/2026, S3 151-005"
+  },
+  "SH01": {
+   "zuerst": "2026-W48",
+   "wiederholt": [],
+   "faellig": "2026-W51"
+  },
+  "HU01": {
+   "zuerst": "2026-W48",
+   "wiederholt": [],
+   "faellig": "2026-W51"
+  },
+  "AHA-STROKE-2026": {
+   "zuerst": "2026-W48",
+   "wiederholt": [],
+   "faellig": "2026-W51",
+   "notiz": "Neu aus der Forschung, Karte NE01"
+  }
+ },
+ "forschung": [
+  "2026-W47: JOSPT CPG Karpaltunnelsyndrom 2026",
+  "2026-W47: NICE NG59 Rückzug psychologische Therapie (in WS01)",
+  "2026-W48: AHA/ASA 2026 Leitlinie Schlaganfall-Reha (in NE01)"
+ ]
+}
