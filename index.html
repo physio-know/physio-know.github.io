@@ -41,6 +41,12 @@ body.pk{margin:0;font-family:Outfit,system-ui,sans-serif;color:var(--pk-ink);-we
 .pk-knopf:active{transform:scale(.97)}
 .wi-portal .wk-seg{display:none}
 .wi-portal .wd-heute{background:var(--pk-lind);color:var(--pk-ink)}
+#pk-ana{position:fixed;inset:0;z-index:9000;background:var(--pk-bg);display:flex;flex-direction:column}
+#pk-ana[hidden]{display:none}
+#pk-ana .pk-ana-kopf{padding:calc(env(safe-area-inset-top) + 14px) 40px 8px}
+#pk-ana .pk-ana-kopf button{all:unset;cursor:pointer;color:#4A6A12;font-weight:600;font-size:17px}
+#pk-ana .pk-ana-kopf h1{margin:6px 0 0;font-size:34px;font-weight:700;letter-spacing:-.02em;text-transform:none}
+#pk-ana .ana-host{flex:1;min-height:0;position:relative}
 .pk-fuss{margin-top:26px;text-align:center;color:var(--pk-mut);font-size:12px}
 @media (max-width:820px){.pk-raster{grid-template-columns:repeat(2,minmax(0,1fr))}.pk-seite{padding-left:20px;padding-right:20px}}
 @media (max-width:560px){.pk-raster{grid-template-columns:1fr}.pk-hero h1{text-transform:none;font-size:30px}.pk-k{height:120px;grid-template-columns:minmax(0,1fr) 100px}.pk-k img{width:100px;height:120px}}
@@ -63,6 +69,7 @@ body.pk{margin:0;font-family:Outfit,system-ui,sans-serif;color:var(--pk-ink);-we
   </section>
   <section class="pk-raster" id="pk-raster"></section>
   <div class="pk-weiter" id="pk-weiter"></div>
+  <section id="pk-ana" hidden aria-label="Anatomie"><div class="pk-ana-kopf"><button data-ana-zu>‹ Start</button><h1>Anatomie</h1></div><div class="ana-host" id="pk-ana-host"></div></section>
   <p class="pk-fuss">Testversion · Inhalte aus Doku-Fix v268 · keine Patientendaten</p>
 </main>
 
@@ -84,7 +91,7 @@ body.pk{margin:0;font-family:Outfit,system-ui,sans-serif;color:var(--pk-ink);-we
   var K=[
     {id:"kb",h:"Krankheitsbilder",p:B.length+" Karten mit Plakat",b:"wissen/SH04.webp"},
     {id:"tests",h:"Tests",p:nTests+" Tests in "+nCl+" Clustern",b:"wissen/tests/lachman.webp"},
-    {id:"ana",h:"Anatomie",p:"3D-Figur folgt im nächsten Schritt",b:"fortbildung/bilder/2026-W48/ana-osg-knochen.webp",aus:1},
+    {id:"ana",h:"Anatomie",p:"3D-Figur, Schichten, Dermatome",b:"fortbildung/bilder/2026-W48/ana-osg-knochen.webp"},
     {id:"wdh",h:"Lernen",p:w0?(kw+": "+w0.titel.length+" Einheiten"):"Wiederholung",b:"fortbildung/bilder/2026-W48/ana-ell-baender.webp",d:1},
     {id:"vo",h:"Verordnung",p:(window.WI_KARTEI?WI_KARTEI.length:9)+" Kapitel, Rezept prüfen",b:"wissen/kartei-leitbild.webp"},
     {id:"forschung",h:"Forschung",p:"Studien, aufbereitet für dich",b:"wissen/NE01.webp"}
@@ -105,8 +112,13 @@ body.pk{margin:0;font-family:Outfit,system-ui,sans-serif;color:var(--pk-ink);-we
     if(b.getAttribute("aria-disabled")==="true")return;
     if(b.dataset.q)return oeffne("kb",b.dataset.q);
     if(b.dataset.vo)return oeffne("vo");
+    if(b.dataset.m==="ana")return anaAuf();
     oeffne(b.dataset.m);
   });
+  var ANA=null;
+  function anaAuf(){var s=document.getElementById("pk-ana");s.hidden=false;document.documentElement.style.overflow="hidden";
+    (ANA||(ANA=import("./anatomie.js"))).then(function(m){m.host(document.getElementById("pk-ana-host"))}).catch(function(x){ANA=null;document.getElementById("pk-ana-host").textContent="Anatomie konnte nicht geladen werden: "+(x&&x.message||x)})}
+  document.querySelector("[data-ana-zu]").addEventListener("click",function(){document.getElementById("pk-ana").hidden=true;document.documentElement.style.overflow="";if(ANA)ANA.then(function(m){m.verlassen()})});
   document.getElementById("pk-q").addEventListener("keydown",function(e){if(e.key==="Enter"&&this.value.trim()){oeffne("kb",this.value.trim());this.blur()}});
   /* Jede Kachel bekommt einen eigenen Bildschirm: Reiterleiste aus Doku-Fix weg, Überschrift und Zurück-Knopf passend zum Bereich */
   var TITEL={kb:"Krankheitsbilder",tests:"Tests",wdh:"Lernen",forschung:"Forschung",vo:"Verordnung"};
