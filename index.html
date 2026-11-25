@@ -6,6 +6,13 @@
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#F3F5EE">
 <title>Physio-Know</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" type="image/png" href="favicon-32.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Physio-Know">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="stylesheet" href="dokufix-stile.css">
 <style>
 :root{--pk-bg:#F3F5EE;--pk-ink:#2B2E2F;--pk-mut:#6B6F70;--pk-line:#E1E4DA;--pk-lind:#C9E86B;--pk-lind-h:#E9F5C8}
@@ -40,7 +47,7 @@ body.pk{margin:0;font-family:Outfit,system-ui,sans-serif;color:var(--pk-ink);-we
 </head>
 <body class="pk">
 <main class="pk-seite">
-  <div class="pk-top"><div class="pk-logo"><i>K</i>Physio-Know</div><span class="pk-chip" id="pk-kw"></span></div>
+  <div class="pk-top"><div class="pk-logo"><img src="icon.svg" alt="" width="34" height="34">Physio-Know</div><span class="pk-chip" id="pk-kw"></span></div>
   <section class="pk-hero">
     <h1>Was willst du nachschlagen?</h1>
     <label class="pk-such"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
@@ -102,5 +109,6 @@ body.pk{margin:0;font-family:Outfit,system-ui,sans-serif;color:var(--pk-ink);-we
   new MutationObserver(function(){var z=WI_st.el&&WI_st.el.querySelector(".wi-zur");if(z&&z.textContent!=="‹ Start"&&/Mehr/.test(z.textContent))z.textContent="‹ Start"}).observe(document.body,{subtree:true,childList:true});
 })();
 </script>
+<script>if("serviceWorker" in navigator)addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));</script>
 </body>
 </html>
