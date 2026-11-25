@@ -47,6 +47,12 @@ body.pk{margin:0;font-family:Outfit,system-ui,sans-serif;color:var(--pk-ink);-we
 #pk-ana .pk-ana-kopf button{all:unset;cursor:pointer;color:#4A6A12;font-weight:600;font-size:17px}
 #pk-ana .pk-ana-kopf h1{margin:6px 0 0;font-size:34px;font-weight:700;letter-spacing:-.02em;text-transform:none}
 #pk-ana .ana-host{flex:1;min-height:0;position:relative}
+.pk-link{all:unset;cursor:pointer;color:#4A6A12;font-weight:600;font-size:14px;padding:6px 0}
+#pk-ls{border:0;border-radius:20px;padding:24px;max-width:460px;width:calc(100% - 40px);font-family:inherit;color:var(--pk-ink)}
+#pk-ls::backdrop{background:rgba(43,46,47,.35)}
+#pk-ls h2{margin:0 0 6px;font-size:22px}#pk-ls p{color:var(--pk-mut);font-size:15px;margin:0 0 12px}
+#pk-ls textarea{width:100%;box-sizing:border-box;border:1px solid var(--pk-line);border-radius:12px;padding:10px;font:inherit;font-size:14px}
+.pk-ls-k{display:flex;justify-content:flex-end;gap:16px;align-items:center;margin-top:8px}
 .pk-fuss{margin-top:26px;text-align:center;color:var(--pk-mut);font-size:12px}
 @media (max-width:820px){.pk-raster{grid-template-columns:repeat(2,minmax(0,1fr))}.pk-seite{padding-left:20px;padding-right:20px}}
 @media (max-width:560px){.pk-raster{grid-template-columns:1fr}.pk-hero h1{text-transform:none;font-size:30px}.pk-k{height:120px;grid-template-columns:minmax(0,1fr) 100px}.pk-k img{width:100px;height:120px}}
@@ -70,7 +76,10 @@ body.pk{margin:0;font-family:Outfit,system-ui,sans-serif;color:var(--pk-ink);-we
   <section class="pk-raster" id="pk-raster"></section>
   <div class="pk-weiter" id="pk-weiter"></div>
   <section id="pk-ana" hidden aria-label="Anatomie"><div class="pk-ana-kopf"><button data-ana-zu>‹ Start</button><h1>Anatomie</h1></div><div class="ana-host" id="pk-ana-host"></div></section>
-  <p class="pk-fuss">Testversion · Inhalte aus Doku-Fix v268 · keine Patientendaten</p>
+  <p class="pk-fuss"><button class="pk-link" data-ls>Lernstand aus Doku-Fix übernehmen</button><br>Keine Patientendaten</p>
+  <dialog id="pk-ls"><form method="dialog"><h2>Lernstand übernehmen</h2><p>In Doku-Fix unter Mehr › Physio-Know auf „Lernstand kopieren“ tippen, dann hier einfügen.</p>
+  <textarea id="pk-ls-t" rows="4" placeholder="Hier einfügen"></textarea><p id="pk-ls-m" role="status"></p>
+  <div class="pk-ls-k"><button value="zu" class="pk-link">Abbrechen</button><button type="button" class="pk-knopf" id="pk-ls-ok">Übernehmen</button></div></form></dialog>
 </main>
 
 <script src="daten/krankheitsbilder-grund.js"></script>
@@ -114,6 +123,17 @@ body.pk{margin:0;font-family:Outfit,system-ui,sans-serif;color:var(--pk-ink);-we
     if(b.dataset.vo)return oeffne("vo");
     if(b.dataset.m==="ana")return anaAuf();
     oeffne(b.dataset.m);
+  });
+  /* Lernstand aus Doku-Fix: nur die vier Wiederholungs-Schlüssel, Inhalt wird geprüft */
+  var LS_KEYS=["df-wdh","df-wdh-buddy","df-wdh-lauf","df-wdh-log"],dlg=document.getElementById("pk-ls"),msg=document.getElementById("pk-ls-m");
+  document.querySelector("[data-ls]").addEventListener("click",function(){msg.textContent="";dlg.showModal();
+    if(navigator.clipboard&&navigator.clipboard.readText)navigator.clipboard.readText().then(function(t){if(/^PK-LERNSTAND:/.test(t))document.getElementById("pk-ls-t").value=t}).catch(function(){})});
+  document.getElementById("pk-ls-ok").addEventListener("click",function(){
+    var t=document.getElementById("pk-ls-t").value.trim();
+    try{if(!/^PK-LERNSTAND:/.test(t))throw 0;var o=JSON.parse(t.slice(13)),n=0;
+      for(var k in o){if(LS_KEYS.indexOf(k)<0||typeof o[k]!=="string")continue;JSON.parse(o[k]);localStorage.setItem(k,o[k]);n++}
+      if(!n)throw 0;msg.textContent="Übernommen. Die App lädt neu.";setTimeout(function(){location.reload()},900)}
+    catch(e){msg.textContent="Das ist kein Lernstand aus Doku-Fix. Bitte dort neu kopieren."}
   });
   var ANA=null;
   function anaAuf(){var s=document.getElementById("pk-ana");s.hidden=false;document.documentElement.style.overflow="hidden";
