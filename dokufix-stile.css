@@ -2159,3 +2159,10 @@ html:root[data-theme="dark"] .tb-faellig{background:#0f0f0f;border-color:#3a3a3a
 .dp-luecke.dp-fobi .dp-zeit{color:var(--a-fobi)}
 .dp-luecke.dp-fobi .dp-luecke-text{background:color-mix(in srgb,var(--a-fobi) 14%,var(--flaeche));border-left-color:var(--a-fobi)}
 .dp-luecke.dp-fobi .dp-luecke-text b{color:var(--a-fobi)}
+
+/* Fallbeispiel in der ausführlichen Fassung (seit 25.11.2026) */
+.wi-fall{background:color-mix(in srgb,var(--tape) 9%,var(--flaeche));border:1px solid color-mix(in srgb,var(--tape) 22%,transparent);border-radius:14px;padding:10px 14px;margin:12px 0 6px}.wi-fall-k{font-size:.75rem;font-weight:700;color:var(--tape);margin-bottom:2px}.wi-fall p{margin:0;font-size:.9375rem}
+/* Bilder und Verlaufskurve in der ausführlichen Fassung (seit 25.11.2026) */
+.wi-bilder{display:grid;gap:10px;margin:12px 0 6px}.wi-b2{grid-template-columns:1fr 1fr}.wi-b3{grid-template-columns:1fr 1fr 1fr}.wi-bild{margin:0}.wi-bild img{width:100%;border-radius:12px;display:block;background:var(--flaeche)}.wi-bild figcaption{font-size:.8125rem;color:var(--text2,#6b6b6b);margin-top:4px;line-height:1.35}
+.wi-b1 .wi-bild img{max-width:420px}
+.wi-kurve{background:var(--flaeche);border:1px solid color-mix(in srgb,var(--tape) 22%,transparent);border-radius:14px;padding:10px 14px;margin:12px 0 6px}.wi-kurve figure{margin:6px 0 0}.wi-kurve figcaption{font-size:.8125rem;font-weight:600}.wi-kurve svg{width:100%;max-width:520px;height:auto;display:block}.wi-kurve .ax{stroke:currentColor;opacity:.25}.wi-kurve .mk{stroke:var(--tape);stroke-dasharray:3 3;opacity:.7}.wi-kurve .mt{font-size:9px;fill:var(--tape);font-weight:700}.wi-kurve .xt{font-size:9px;fill:currentColor;opacity:.55;text-anchor:middle}.wi-kurve .ln{fill:none;stroke:var(--tape);stroke-width:2.2}.wi-kurve .pt{fill:var(--tape)}.wi-kurve .vt{font-size:10px;font-weight:700;text-anchor:middle;fill:currentColor}.wi-kurve-x{font-size:.75rem;opacity:.6;margin:2px 0 0}
