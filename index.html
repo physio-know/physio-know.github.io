@@ -17,6 +17,9 @@
 <style>
 :root{--pk-bg:#F3F5EE;--pk-ink:#2B2E2F;--pk-mut:#6B6F70;--pk-line:#E1E4DA;--pk-lind:#C9E86B;--pk-lind-h:#E9F5C8}
 html,body{background:var(--pk-bg)}
+/* Startseite muss scrollen (Doku-Fix-CSS sperrt html/body); offen ist der Bereich ein eigenes Fenster */
+html,body.pk{height:auto;overflow-y:auto}
+html:has(.wi-portal),html:has(.wi-portal) body.pk{height:100%;overflow:hidden}
 body.pk{margin:0;font-family:Outfit,system-ui,sans-serif;color:var(--pk-ink);-webkit-font-smoothing:antialiased}
 .pk-seite{max-width:1180px;margin:0 auto;padding:calc(env(safe-area-inset-top) + 18px) 40px 40px}
 .pk-top{display:flex;justify-content:space-between;align-items:center}
@@ -114,9 +117,9 @@ body.pk{margin:0;font-family:Outfit,system-ui,sans-serif;color:var(--pk-ink);-we
   var nTests=Object.keys(T.tests).length,nCl=Object.keys(T.cluster).length;
   var K=[
     {id:"kb",h:"Krankheitsbilder",p:B.length+" Karten mit Plakat",b:"wissen/SH04.webp"},
+    {id:"wdh",h:"Lernen",p:w0?(kw+": "+w0.titel.length+" Einheiten"):"Wiederholung",b:"fortbildung/bilder/2026-W48/ana-ell-baender.webp",d:1},
     {id:"tests",h:"Tests",p:nTests+" Tests in "+nCl+" Clustern",b:"wissen/tests/lachman.webp"},
     {id:"ana",h:"Anatomie",p:"3D-Figur, Schichten, Dermatome",b:"fortbildung/bilder/2026-W48/ana-osg-knochen.webp"},
-    {id:"wdh",h:"Lernen",p:w0?(kw+": "+w0.titel.length+" Einheiten"):"Wiederholung",b:"fortbildung/bilder/2026-W48/ana-ell-baender.webp",d:1},
     {id:"vo",h:"Verordnung",p:(window.WI_KARTEI?WI_KARTEI.length:9)+" Kapitel, Rezept prüfen",b:"wissen/kartei-leitbild.webp"},
     {id:"forschung",h:"Forschung",p:"Studien, aufbereitet für dich",b:"wissen/NE01.webp"}
   ];
